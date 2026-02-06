@@ -10,6 +10,11 @@ namespace codesample
     {
         static void Main(string[] args)
         {
+            char char2 = 'a';
+
+            int result2 = char2 & '_';
+
+            Console.WriteLine("result2: " + (char)result2);
         }
     }
 }
