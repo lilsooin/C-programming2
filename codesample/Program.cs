@@ -1,4 +1,5 @@
-﻿using System;
+﻿using codesample.operator2;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,11 +11,35 @@ namespace codesample
     {
         static void Main(string[] args)
         {
-            char char2 = 'a';
+            // char char2 = 'a';
 
-            int result2 = char2 & '_';
+            // int result2 = char2 & '_';
 
-            Console.WriteLine("result2: " + (char)result2);
+            // Console.WriteLine("result2: " + (char)result2);
+
+            // BitShift();
+
+            BitFlag.BitFlagRun();
+        }
+
+        static void BitShift()
+        {
+            int num1 = 1;
+
+            int result1 = num1 << 1;
+
+            Console.WriteLine("result1: " + result1);
+
+            int result2 = result1 << 2;
+
+            Console.WriteLine("result2: " + result2);
+
+            int result3 = result2 >> 3;
+
+            Console.WriteLine("result3: " + result3);
+
+            // int result4 = result3 << 2.5f;
+            // int result5 = 2.1f << 2.5f;
         }
     }
 }
