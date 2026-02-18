@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="condition\InsertStudentInformation2.cs" />
     <Compile Include="operator2\BitFlag.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -52,7 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="function\" />
-    <Folder Include="string\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

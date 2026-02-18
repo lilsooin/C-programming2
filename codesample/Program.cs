@@ -1,4 +1,5 @@
-﻿using codesample.operator2;
+﻿using codesample.condition;
+using codesample.operator2;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,14 +13,15 @@ namespace codesample
         static void Main(string[] args)
         {
             // char char2 = 'a';
-
             // int result2 = char2 & '_';
-
             // Console.WriteLine("result2: " + (char)result2);
-
             // BitShift();
 
-            BitFlag.BitFlagRun();
+           
+            // BitFlag.BitFlagRun();
+
+            // condtion
+            InsertStudentInformation2.InsertStudentInformation2Run();
         }
 
         static void BitShift()
