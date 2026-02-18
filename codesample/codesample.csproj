@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="condition\InsertStudentInformation2.cs" />
+    <Compile Include="logical and conditional operator\LogicalExpressions.cs" />
+    <Compile Include="logical and conditional operator\OrderOfExpressionEvaluation.cs" />
     <Compile Include="operator2\BitFlag.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

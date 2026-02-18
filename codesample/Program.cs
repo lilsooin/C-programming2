@@ -1,4 +1,5 @@
 ﻿using codesample.condition;
+using codesample.logical_and_conditional_operator;
 using codesample.operator2;
 using System;
 using System.Collections.Generic;
@@ -17,13 +18,17 @@ namespace codesample
             // Console.WriteLine("result2: " + (char)result2);
             // BitShift();
 
-           
+
             // BitFlag.BitFlagRun();
 
             // condtion
             // InsertStudentInformation2.InsertStudentInformation2Run();
 
-          
+            // 논리표현식
+            LogicalExpressions.LogicalExpressionsRun();
+
+            // 연산자 우선순위
+
         }
 
         static void BitShift()
