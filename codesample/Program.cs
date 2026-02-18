@@ -21,7 +21,9 @@ namespace codesample
             // BitFlag.BitFlagRun();
 
             // condtion
-            InsertStudentInformation2.InsertStudentInformation2Run();
+            // InsertStudentInformation2.InsertStudentInformation2Run();
+
+          
         }
 
         static void BitShift()

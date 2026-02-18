@@ -39,8 +39,6 @@ namespace codesample.condition
             {
                 Console.WriteLine("You have no talent... Maybe you should do something else?");
             }
-            
-
         }
     }
 }
