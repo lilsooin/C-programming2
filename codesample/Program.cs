@@ -1,6 +1,9 @@
-﻿using codesample.condition;
+﻿using codesample.array;
+using codesample.condition;
 using codesample.logical_and_conditional_operator;
+using codesample.loop;
 using codesample.operator2;
+using codesample.switch_statment;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,9 +28,19 @@ namespace codesample
             // InsertStudentInformation2.InsertStudentInformation2Run();
 
             // 논리표현식
-            LogicalExpressions.LogicalExpressionsRun();
+            // LogicalExpressions.LogicalExpressionsRun();
 
             // 연산자 우선순위
+            // OrderOfExpressionEvaluation.OrderOfExpressionEvaluationRun();
+
+            // switch
+            //CalculationWithSwitchStatement.CalculationWithSwitchStatementRun();
+
+            // array
+            //InsertStudentInformation3.InsertStudentInformation3Run();
+
+            // loop sum
+            Sum.SumRun();
 
         }
 
@@ -36,15 +49,12 @@ namespace codesample
             int num1 = 1;
 
             int result1 = num1 << 1;
-
             Console.WriteLine("result1: " + result1);
 
             int result2 = result1 << 2;
-
             Console.WriteLine("result2: " + result2);
 
             int result3 = result2 >> 3;
-
             Console.WriteLine("result3: " + result3);
 
             // int result4 = result3 << 2.5f;

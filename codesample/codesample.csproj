@@ -43,12 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="array\InsertStudentInformation3.cs" />
     <Compile Include="condition\InsertStudentInformation2.cs" />
     <Compile Include="logical and conditional operator\LogicalExpressions.cs" />
     <Compile Include="logical and conditional operator\OrderOfExpressionEvaluation.cs" />
+    <Compile Include="loop\Sum.cs" />
     <Compile Include="operator2\BitFlag.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="switch statement\CalculationWithSwitchStatement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
