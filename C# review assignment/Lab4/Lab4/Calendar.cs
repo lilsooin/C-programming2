@@ -6,21 +6,20 @@ namespace Lab4
     {
         public static bool IsLeapYear(uint year)
         {
-            bool IsLeapYear;
-
+            bool bIsLeapYear = true;
             if (year % 4 == 0)
             {
                 if (year % 100 == 0 && year % 400 != 0)
                 {
-                    IsLeapYear = false;
+                    bIsLeapYear = false;
                 }
             }
             else
             {
-                IsLeapYear = false;
+                bIsLeapYear = false;
             }
 
-            return false;
+            return bIsLeapYear;
         }
 
         public static int GetDaysInMonth(uint year, uint month)
@@ -35,11 +34,11 @@ namespace Lab4
 
             if (IsLeapYear(year))
             {
-                return LeapDayOfMonths[month - 1];
+                return (int)LeapDayOfMonths[month - 1];
             }
             else
             {
-                return DaysOfMonths[month - 1];
+                return (int)DaysOfMonths[month - 1];
             }
         }
     }
