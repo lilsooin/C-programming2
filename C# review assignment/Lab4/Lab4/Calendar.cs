@@ -27,7 +27,7 @@ namespace Lab4
             uint[] DaysOfMonths = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
             uint[] LeapDayOfMonths = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
-            if (month > 12)
+            if (month > 12 || month < 1 || year > 9999)
             {
                 return -1;
             }
