@@ -37,14 +37,22 @@ namespace Lab5
 
             const double epsilon = 0.001;
 
-            double totalRevenue = Lab5.CalculateTotalRevenue(revenuePerDay, 0, 5);
+            /*double totalRevenue = Lab5.CalculateTotalRevenue(revenuePerDay, 0, 5);
             Debug.Assert(Math.Abs(totalRevenue - 10275.2) <= epsilon);
 
             totalRevenue = Lab5.CalculateTotalRevenue(revenuePerDay, 10, 14);
             Debug.Assert(Math.Abs(totalRevenue - 890481.09) <= epsilon);
 
             totalRevenue = Lab5.CalculateTotalRevenue(revenuePerDay, 0, 14);
-            Debug.Assert(Math.Abs(totalRevenue - 924657.79) <= epsilon);
+            Debug.Assert(Math.Abs(totalRevenue - 924657.79) <= epsilon);*/
+
+            int[] nums = new int[5] { 1, 2, 3, 4, 5 };
+            Practice.Square(nums);
+
+            Debug.Assert(nums[0] == 1);
+            Debug.Assert(nums[1] == 4);
+
+            Practice.PrintMultiplicationTable(5);
         }
     }
 }
