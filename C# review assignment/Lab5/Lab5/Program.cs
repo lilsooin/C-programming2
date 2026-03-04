@@ -53,6 +53,8 @@ namespace Lab5
             Debug.Assert(nums[1] == 4);
 
             Practice.PrintMultiplicationTable(5);
+
+
         }
     }
 }

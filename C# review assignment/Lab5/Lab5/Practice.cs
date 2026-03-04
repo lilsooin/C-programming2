@@ -169,5 +169,50 @@ namespace Lab5
         }
 
         // 9
+        public static void SumEachColumn(int[,] nums)
+        {
+            int sum = 0;
+            for (int i = 0; i < nums.GetLength(0); ++i)
+            {
+                for (int j = 0; j < nums.GetLength(1); ++j)
+                {
+                    if (i == nums.GetLength(i) - 1 && j == nums.GetLength(j) - 1)
+                    {
+                        nums[i, j] = sum;
+
+                        return;
+                    }
+
+                    sum += nums[i, j];
+                }
+            }
+        }
+
+        // 10
+        public static void GetLabel(int[,] voltorbFlips, int[] outNumColumns, int[] outNumRows, int[] outVoltorbColumns, int[] outVoltorbRow)
+        {
+            for (int i = 0; i < voltorbFlips.GetLength(0); i++)
+            {
+                int outNums = 0;
+
+                for (int j = 0; j < voltorbFlips.GetLength(1); j++)
+                {
+                    // 근데 이거 5x5일 때만 가능할 듯
+                    outNumColumns[i] += voltorbFlips[j, i];
+                    outNumRows[i] += voltorbFlips[i, j];
+
+                    if(voltorbFlips[j, i] == 0)
+                    {
+                        ++outVoltorbColumns[j];
+                    }
+
+                    if (voltorbFlips[i, j] == 0)
+                    {
+                        ++outVoltorbRow[i];
+                    }
+
+                }
+            }
+        }
     }
 }
