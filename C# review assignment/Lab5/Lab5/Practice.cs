@@ -126,6 +126,48 @@ namespace Lab5
         }
 
         // 8
+        public static uint Compare2(int[] nums1, in uint[] nums2)
+        {
+            uint count = 0;
 
+            if (nums1.Length == nums2.Length)
+            {
+                for (int i = 0; i < nums1.Length; ++i)
+                {
+                    if (nums1[i] == nums2[i])
+                    {
+                        ++count;
+                    }
+                }
+            }
+            else
+            {
+                if (nums1.Length > nums2.Length)
+                {
+
+                    for (int i = 0; i < nums2.Length; ++i)
+                    {
+                        if (nums1[i] == nums2[i])
+                        {
+                            ++count;
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < nums1.Length; ++i)
+                    {
+                        if (nums1[i] == nums2[i])
+                        {
+                            ++count;
+                        }
+                    }
+                }
+            }
+
+            return count;
+        }
+
+        // 9
     }
 }
