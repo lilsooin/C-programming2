@@ -34,7 +34,7 @@ namespace Lab5
 
         public static int FindIndex(int n, int[] nums)
         {
-            for (int i = 0; n < nums.Length; n++)
+            for (int i = 0; i < nums.Length; i++)
             {
                 if (nums[i] == n)
                 {
@@ -64,9 +64,9 @@ namespace Lab5
         public static int GetBiggestDifference(int[] nums)
         {
             int biggestDifference = 0;
-            for (int i = 0; i <= nums.Length; ++i)
+            for (int i = 0; i < nums.Length - 1; ++i)
             {
-                int difference = nums[i] - nums[i + 1];
+                int difference = nums[i + 1] - nums[i];
                 if (difference > biggestDifference)
                 {
                     biggestDifference = difference;
@@ -77,7 +77,7 @@ namespace Lab5
         }
 
         // 6
-        public static bool IsParentesisValid(string str)
+        public static bool IsParenthesisValid(string str)
         {
             int openCount = 0;
             int closeCount = 0;
@@ -100,7 +100,7 @@ namespace Lab5
                 }
             }
 
-            if (openCount == closeCount)
+            if (openCount == closeCount && openCount != 0 && closeCount != 0)
             {
                 return true;
             }
@@ -111,7 +111,7 @@ namespace Lab5
         }
 
         // 7
-        public static uint Compare(int[] nums1, in uint[] nums2)
+        public static uint Compare(int[] nums1, int[] nums2)
         {
             uint count = 0;
             for (int i = 0; i < nums1.Length; ++i)
@@ -171,20 +171,17 @@ namespace Lab5
         // 9
         public static void SumEachColumn(int[,] nums)
         {
-            int sum = 0;
-            for (int i = 0; i < nums.GetLength(0); ++i)
+
+            for (int j = 0; j < nums.GetLength(1); ++j)
             {
-                for (int j = 0; j < nums.GetLength(1); ++j)
+                int sum = 0;
+               
+                for (int i = 0; i < nums.GetLength(0); ++i)
                 {
-                    if (i == nums.GetLength(i) - 1 && j == nums.GetLength(j) - 1)
-                    {
-                        nums[i, j] = sum;
-
-                        return;
-                    }
-
                     sum += nums[i, j];
                 }
+
+                nums[nums.GetLength(0) - 1, j] = sum;
             }
         }
 
@@ -201,7 +198,7 @@ namespace Lab5
                     outNumColumns[i] += voltorbFlips[j, i];
                     outNumRows[i] += voltorbFlips[i, j];
 
-                    if(voltorbFlips[j, i] == 0)
+                    if (voltorbFlips[j, i] == 0)
                     {
                         ++outVoltorbColumns[j];
                     }
