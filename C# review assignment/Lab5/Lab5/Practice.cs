@@ -175,7 +175,7 @@ namespace Lab5
             for (int j = 0; j < nums.GetLength(1); ++j)
             {
                 int sum = 0;
-               
+
                 for (int i = 0; i < nums.GetLength(0); ++i)
                 {
                     sum += nums[i, j];
@@ -190,24 +190,27 @@ namespace Lab5
         {
             for (int i = 0; i < voltorbFlips.GetLength(0); i++)
             {
-                int outNums = 0;
-
                 for (int j = 0; j < voltorbFlips.GetLength(1); j++)
                 {
-                    // 근데 이거 5x5일 때만 가능할 듯
-                    outNumColumns[i] += voltorbFlips[j, i];
-                    outNumRows[i] += voltorbFlips[i, j];
-
-                    if (voltorbFlips[j, i] == 0)
-                    {
-                        ++outVoltorbColumns[j];
-                    }
-
                     if (voltorbFlips[i, j] == 0)
                     {
                         ++outVoltorbRow[i];
                     }
 
+                    outNumRows[i] += voltorbFlips[i, j];
+                }
+            }
+
+            for (int j = 0; j < voltorbFlips.GetLength(1); j++)
+            {
+                for (int i = 0; i < voltorbFlips.GetLength(0); i++)
+                {
+                    if (voltorbFlips[i, j] == 0)
+                    {
+                        ++outVoltorbColumns[j];
+                    }
+
+                    outNumColumns[i] += voltorbFlips[j, i];
                 }
             }
         }

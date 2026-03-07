@@ -163,7 +163,7 @@ namespace Lab5
             Debug.Assert(outNumRows[2] == 4);
             Debug.Assert(outNumRows[3] == 6);
 
-
+            Console.WriteLine("outVoltorColumns[2] >> " + outVoltorColumns[2]);
             Debug.Assert(outVoltorColumns[2] == 1);
             Debug.Assert(outVoltorColumns[3] == 3);
             Debug.Assert(outVoltorColumns[4] == 1);
