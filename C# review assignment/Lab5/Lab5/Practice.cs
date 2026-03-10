@@ -64,7 +64,7 @@ namespace Lab5
         public static int GetBiggestDifference(int[] nums)
         {
             int biggestDifference = 0;
-            for (int i = 0; i < nums.Length - 1; ++i)
+            for (int i = 0; i < nums.Length; ++i)
             {
                 int difference = nums[i + 1] - nums[i];
                 if (difference > biggestDifference)
@@ -113,7 +113,7 @@ namespace Lab5
         // 7
         public static uint Compare(int[] nums1, int[] nums2)
         {
-            uint count = 0;
+            uint count = 0u;
             for (int i = 0; i < nums1.Length; ++i)
             {
                 if (nums1[i] == nums2[i])
