@@ -12,7 +12,7 @@ namespace Lab6
             int[,] rotated = Lab6.Rotate90Degrees(data);
             printArray(rotated);
 
-            /*Debug.Assert(isArrayEqual(new int[,]
+            Debug.Assert(isArrayEqual(new int[,]
             {
                 { 41, 31, 21, 11, 1 },
                 { 42, 32, 22, 12, 2 },
@@ -22,7 +22,7 @@ namespace Lab6
                 { 46, 36, 26, 16, 6 }
             }, rotated));
 
-            Lab6.TransformArray(data, EMode.HorizontalMirror);
+           /* Lab6.TransformArray(data, EMode.HorizontalMirror);
             printArray(data);
 
             Debug.Assert(isArrayEqual(new int[,]
