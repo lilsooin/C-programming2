@@ -10,40 +10,47 @@ namespace Lab6
     {
         public static int[,] Rotate90Degrees(int[,] data)
         {
-            int height = data.GetLength(0);
-            int width = data.GetLength(1);
-            Console.WriteLine("height > " + height); // 5
-            Console.WriteLine("width > " + width);   // 6
+            int col = data.GetLength(0); // 5
+            int row = data.GetLength(1); // 6
 
-            int[,] newData = new int[width, height];
+            int[,] rotated = new int[row, col]; // 6, 5
 
-            for (int i = 0; i < data.GetLength(0); ++i)
+            for (int i = 0; i < row; ++i)
             {
-                for (int j = 0; j < data.GetLength(1); ++j)
+                for (int j = 0; j < col; ++j)
                 {
-                    newData[j, height - 1 - i] = data[i, j];
+                    rotated[i, j] = data[col - 1 - j, i];
+                    // 0,0 <- 4, 0
+                    // 0,1 <- 3, 0
+                    // 0,2 <- 2, 0
+                    // ...
+                    // 1,0 <- 4, 1
+                    //
                 }
             }
 
-            return newData;
+            return rotated;
         }
 
         public static void TransformArray(int[,] data, EMode eMode)
         {
             // 2중 for문을 한 번 더 안 쓰고 세팅하는 법 없을까?
-            int col = data.GetLength(0);
-            int row = data.GetLength(1);
+            // 있다
+            int row = data.GetLength(0);
+            int col = data.GetLength(1);
 
-            int[,] temp = new int[col, row];
+            int temp;
 
             switch (eMode)
             {
                 case EMode.HorizontalMirror:
-                    for (int i = 0; i < col; ++i)
+                    for (int i = 0; i < row; ++i)
                     {
-                        for (int j = 0; j < row; ++j)
+                        for (int j = 0; j < col; ++j)
                         {
-                            temp[i, row - 1 - j] = data[i, j];
+                            temp = data[i, col - 1 - j];
+                            data[i, j] = temp;
+
                         }
                     }
 
@@ -52,9 +59,11 @@ namespace Lab6
                 case EMode.VerticalMirror:
                     for (int j = 0; j < col; ++j)
                     {
-                        for (int i = 0; i < row; ++i)
+                        for (int i = 0; i < row / 2; ++i)
                         {
-                            temp[col - 1 - j, i] = data[j, i];
+                            temp = data[i, j];
+                            data[i, j] = data[i, row - 1 - j];
+                            data[i, row - 1 - j] = temp;
                         }
                     }
 
@@ -65,21 +74,14 @@ namespace Lab6
                     {
                         for (int j = 0; j < row; ++j)
                         {
-                            temp[(i + 1) % col, (j + 1) % row] = data[i, j];
+                            temp = data[(i + 1) % col, (j + 1) % row];
+                            data[i, j] = temp;
                         }
                     }
 
                     break;
 
                 default: break;
-            }
-
-            for (int i = 0; i < col; ++i)
-            {
-                for (int j = 0; j < row; ++j)
-                {
-                    data[i, j] = temp[i, j];
-                }
             }
         }
     }
