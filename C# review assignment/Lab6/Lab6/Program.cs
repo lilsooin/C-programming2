@@ -22,7 +22,8 @@ namespace Lab6
                 { 46, 36, 26, 16, 6 }
             }, rotated));
 
-           /* Lab6.TransformArray(data, EMode.HorizontalMirror);
+
+            Lab6.TransformArray(data, EMode.HorizontalMirror);
             printArray(data);
 
             Debug.Assert(isArrayEqual(new int[,]
@@ -41,26 +42,29 @@ namespace Lab6
 
             Debug.Assert(isArrayEqual(new int[,]
             {
-                { 41, 42, 43, 44, 45, 46 },
-                { 31, 32, 33, 34, 35, 36 },
-                { 21, 22, 23, 24, 25, 26 },
-                { 11, 12, 13, 14, 15, 16 },
-                { 1, 2, 3, 4, 5, 6 }
+                 { 41, 42, 43, 44, 45, 46 },
+                 { 31, 32, 33, 34, 35, 36 },
+                 { 21, 22, 23, 24, 25, 26 },
+                 { 11, 12, 13, 14, 15, 16 },
+                 { 1, 2, 3, 4, 5, 6 }
             }, data));
 
-            data = getTestArray();
 
-            Lab6.TransformArray(data, EMode.DiagonalShift);
-            printArray(data);
+            /* 
 
-            Debug.Assert(isArrayEqual(new int[,]
-            {
-                { 46, 41, 42, 43, 44, 45 },
-                { 6, 1, 2, 3, 4, 5 },
-                { 16, 11, 12, 13, 14, 15 },
-                { 26, 21, 22, 23, 24, 25 },
-                { 36, 31, 32, 33, 34, 35 }
-            }, data));*/
+             data = getTestArray();
+
+             Lab6.TransformArray(data, EMode.DiagonalShift);
+             printArray(data);
+
+             Debug.Assert(isArrayEqual(new int[,]
+             {
+                 { 46, 41, 42, 43, 44, 45 },
+                 { 6, 1, 2, 3, 4, 5 },
+                 { 16, 11, 12, 13, 14, 15 },
+                 { 26, 21, 22, 23, 24, 25 },
+                 { 36, 31, 32, 33, 34, 35 }
+             }, data));*/
         }
 
         private static bool isArrayEqual(int[,] expected, int[,] actual)
