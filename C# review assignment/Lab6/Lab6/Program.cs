@@ -49,22 +49,19 @@ namespace Lab6
                  { 1, 2, 3, 4, 5, 6 }
             }, data));
 
+            data = getTestArray();
 
-            /* 
+            Lab6.TransformArray(data, EMode.DiagonalShift);
+            printArray(data);
 
-             data = getTestArray();
-
-             Lab6.TransformArray(data, EMode.DiagonalShift);
-             printArray(data);
-
-             Debug.Assert(isArrayEqual(new int[,]
-             {
+            Debug.Assert(isArrayEqual(new int[,]
+            {
                  { 46, 41, 42, 43, 44, 45 },
                  { 6, 1, 2, 3, 4, 5 },
                  { 16, 11, 12, 13, 14, 15 },
                  { 26, 21, 22, 23, 24, 25 },
                  { 36, 31, 32, 33, 34, 35 }
-             }, data));*/
+            }, data));
         }
 
         private static bool isArrayEqual(int[,] expected, int[,] actual)

@@ -61,6 +61,14 @@ namespace Lab6
                     break;
 
                 case EMode.DiagonalShift:
+                    for (int i = 0; i < col; ++i)
+                    {
+                        for (int j = 0; j < row; ++j)
+                        {
+                            temp[(i + 1) % col, (j + 1) % row] = data[i, j];
+                        }
+                    }
+
                     break;
 
                 default: break;
