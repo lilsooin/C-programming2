@@ -20,6 +20,7 @@ namespace Lab6
                 for (int j = 0; j < col; ++j)
                 {
                     rotated[i, j] = data[col - 1 - j, i];
+                    
                     // 0,0 <- 4, 0
                     // 0,1 <- 3, 0
                     // 0,2 <- 2, 0
@@ -46,24 +47,24 @@ namespace Lab6
                 case EMode.HorizontalMirror:
                     for (int i = 0; i < row; ++i)
                     {
-                        for (int j = 0; j < col; ++j)
+                        for (int j = 0; j < col / 2; ++j)
                         {
-                            temp = data[i, col - 1 - j];
-                            data[i, j] = temp;
-
+                            temp = data[i, j];
+                            data[i, j] = data[i, col - 1 - j];
+                            data[i, col - 1 - j] = temp;
                         }
                     }
 
                     break;
 
                 case EMode.VerticalMirror:
-                    for (int j = 0; j < col; ++j)
+                    for (int i = 0; i < row / 2 ; ++i)
                     {
-                        for (int i = 0; i < row / 2; ++i)
+                        for (int j = 0; j < col; ++j)
                         {
                             temp = data[i, j];
-                            data[i, j] = data[i, row - 1 - j];
-                            data[i, row - 1 - j] = temp;
+                            data[i, j] = data[row - 1 - i, j];
+                            data[row - 1 - i, j] = temp;
                         }
                     }
 
