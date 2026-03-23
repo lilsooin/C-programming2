@@ -3,6 +3,7 @@ using codesample.condition;
 using codesample.logical_and_conditional_operator;
 using codesample.loop;
 using codesample.operator2;
+using codesample.recursive;
 using codesample.switch_statment;
 using System;
 using System.Collections.Generic;
@@ -40,7 +41,10 @@ namespace codesample
             //InsertStudentInformation3.InsertStudentInformation3Run();
 
             // loop sum
-            Sum.SumRun();
+            //Sum.SumRun();
+
+            // recursive
+            Recursive.RecursiveRun();
 
         }
 

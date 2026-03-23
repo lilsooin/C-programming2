@@ -51,6 +51,7 @@
     <Compile Include="operator2\BitFlag.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="recursive\Recursive.cs" />
     <Compile Include="switch statement\CalculationWithSwitchStatement.cs" />
   </ItemGroup>
   <ItemGroup>
