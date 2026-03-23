@@ -44,8 +44,10 @@ namespace codesample
             //Sum.SumRun();
 
             // recursive
-            Recursive.RecursiveRun();
+            //Recursive.RecursiveRun();
 
+            // shuffle algorithm
+            RandomShuffling.RandomShuffling.RandomShufflingRun();
         }
 
         static void BitShift()
