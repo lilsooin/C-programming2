@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment2
 {
-    enum EShape
+    public enum EShape
     {
         Rectangle,
         IsoscelesRightTriangle,
