@@ -9,6 +9,8 @@ namespace Assignment2
             Console.WriteLine("Hello World!");
 
             printCanvas(Canvas.Draw(6, 9, EShape.Rectangle));
+            printCanvas(Canvas.Draw(8, 8, EShape.IsoscelesRightTriangle));
+            printCanvas(Canvas.Draw(11, 6, EShape.IsoscelesTriangle));
         }
 
         // canvas를 콘솔 창에 출력해주는 도우미 함수
