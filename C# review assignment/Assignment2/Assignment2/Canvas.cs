@@ -219,58 +219,155 @@ namespace Assignment2
             int width = canvas.GetLength(1) - padding;
             int height = canvas.GetLength(0) - padding;
 
-            for (int i = 0; i < canvas.GetLength(0); i++)
-            {
-                for (int j = 0; j < canvas.GetLength(1); j++)
-                {
-                    if (canvas[i, j] == '*')
-                    {
-                        ++count;
-                    }
-                }
-            }
-            Console.WriteLine("count >> " + count);
 
             switch (shape)
             {
+                // 깔끔하게 고치는 법이 있을텐데
                 case EShape.Rectangle:
-                    if (count == height * width)
+                    for (int i = 0; i < canvas.GetLength(0); ++i)
                     {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                        for (int j = 0; j < canvas.GetLength(1); ++j)
+                        {
+                            if (i == 0 || i == canvas.GetLength(0) - 1)
+                            {
 
-                case EShape.IsoscelesTriangle:
-                    if ((width == height * 2 - 1) && (height * width / 2 == count))
-                    {
-                        return true;
+                            }
+                            else if (j == 0 || j == canvas.GetLength(1) - 1)
+                            {
+
+                            }
+                            else if (j == 1 || j == canvas.GetLength(1) - 2 || i == 1 || i == canvas.GetLength(0) - 2)
+                            {
+                                if (canvas[i, j] != ' ')
+                                {
+                                    return false;
+                                }
+                            }
+                            else
+                            {
+                                if (canvas[i, j] != '*')
+                                {
+                                    return false;
+                                }
+                            }
+                        }
                     }
-                    else
-                    {
-                        return false;
-                    }
+                    return true;
 
                 case EShape.IsoscelesRightTriangle:
-                    if (height * width / 2 == count)
+                    for (int i = 0; i < canvas.GetLength(0); ++i)
                     {
-                        return true;
+                        for (int j = 0; j < canvas.GetLength(1); ++j)
+                        {
+                            if (i == 0 || i == canvas.GetLength(0) - 1)
+                            {
+
+                            }
+                            else if (j == 0 || j == canvas.GetLength(1) - 1)
+                            {
+
+                            }
+                            else if (j == 1 || j == canvas.GetLength(1) - 2 || i == 1 || i == canvas.GetLength(0) - 2)
+                            {
+
+                            }
+                            else if (j > i)
+                            {
+                                if (canvas[i, j] != ' ')
+                                {
+                                    return false;
+                                }
+                            }
+                            else
+                            {
+                                if (canvas[i, j] != '*')
+                                {
+                                    return false;
+                                }
+
+                            }
+                        }
                     }
-                    else
+                    return true;
+
+
+                case EShape.IsoscelesTriangle:
+                    for (int i = 0; i < canvas.GetLength(0); ++i)
                     {
-                        return false;
+                        for (int j = 0; j < canvas.GetLength(1); ++j)
+                        {
+                            if (i == 0 || i == canvas.GetLength(0) - 1)
+                            {
+                            }
+                            else if (j == 0 || j == canvas.GetLength(1) - 1)
+                            {
+
+                            }
+                            else if (j == 1 || j == canvas.GetLength(0) - 2 || i == 1 || i == canvas.GetLength(0) - 2)
+                            {
+                            }
+                            else if (j < (canvas.GetLength(1) / 2) + (-i + 2) || j > (canvas.GetLength(1) / 2) + (i - 2))
+                            {
+                                if (canvas[i, j] != ' ')
+                                {
+                                    return false;
+                                }
+                            }
+                            else
+                            {
+                                if (canvas[i, j] != '*')
+                                {
+                                    return false;
+                                }
+                            }
+                        }
                     }
+                    return true;
+
 
                 case EShape.Circle:
-                    if (width == height && count < width * height && (count > height * width / 2))
-                    {
-                        return true;
-                    } else
+                    if (canvas.GetLength(0) != canvas.GetLength(1))
                     {
                         return false;
                     }
+                    
+                    int radius = (canvas.GetLength(1) - 4) / 2;
+                    int x = canvas.GetLength(1) / 2;
+                    int y = canvas.GetLength(0) / 2;
+
+                    for (int i = 0; i < canvas.GetLength(0); ++i)
+                    {
+                        for (int j = 0; j < canvas.GetLength(1); ++j)
+                        {
+                            if (i == 0 || i == canvas.GetLength(0) - 1)
+                            {
+                             
+                            }
+                            else if (j == 0 || j == canvas.GetLength(1) - 1)
+                            {
+                               
+                            }
+                            else if (j == 1 || j == canvas.GetLength(1) - 2 || i == 1 || i == canvas.GetLength(0) - 2)
+                            {
+                             
+                            }
+                            else if ((x - j) * (x - j) + (y - i) * (y - i) > radius * radius)
+                            {
+                                if (canvas[i, j] != ' ')
+                                {
+                                    return false;
+                                }
+                            }
+                            else
+                            {
+                                if (canvas[i, j] != '*')
+                                {
+                                    return false;
+                                }
+                            }
+                        }
+                    }
+                    return true;
 
                 default:
                     Console.WriteLine("something wrong");
