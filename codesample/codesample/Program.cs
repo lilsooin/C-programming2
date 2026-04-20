@@ -51,7 +51,10 @@ namespace codesample
             // RandomShuffling.RandomShuffling.RandomShufflingRun();
 
             // array of arrays
-            ArrayOfArrays.ArrayOfArraysRun();
+            // ArrayOfArrays.ArrayOfArraysRun();
+
+            // array of arrays(tokenizer)
+            Tokenizer.TokenizerRun();
         }
 
         static void BitShift()

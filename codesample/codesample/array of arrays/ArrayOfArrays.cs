@@ -61,6 +61,7 @@ namespace codesample.array_of_arrays
                     }
                 }
                 Console.WriteLine("-----------------------------");
+                
             }
 
         }

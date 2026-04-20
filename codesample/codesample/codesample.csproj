@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="array of arrays\ArrayOfArrays.cs" />
+    <Compile Include="array of arrays\Tokenizer.cs" />
     <Compile Include="array\InsertStudentInformation3.cs" />
     <Compile Include="condition\InsertStudentInformation2.cs" />
     <Compile Include="logical and conditional operator\LogicalExpressions.cs" />
