@@ -1,4 +1,5 @@
 ﻿using codesample.array;
+using codesample.array_of_arrays;
 using codesample.condition;
 using codesample.logical_and_conditional_operator;
 using codesample.loop;
@@ -47,7 +48,10 @@ namespace codesample
             //Recursive.RecursiveRun();
 
             // shuffle algorithm
-            RandomShuffling.RandomShuffling.RandomShufflingRun();
+            // RandomShuffling.RandomShuffling.RandomShufflingRun();
+
+            // array of arrays
+            ArrayOfArrays.ArrayOfArraysRun();
         }
 
         static void BitShift()
