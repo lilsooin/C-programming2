@@ -74,6 +74,7 @@
     <Compile Include="recursive\Recursive.cs" />
     <Compile Include="RandomShuffling\RandomShuffling.cs" />
     <Compile Include="stringbuilder\StringBuilderExample.cs" />
+    <Compile Include="stringconcat vs stringbuilder\StringConcatVsStringBuilder.cs" />
     <Compile Include="switch statement\CalculationWithSwitchStatement.cs" />
   </ItemGroup>
   <ItemGroup>

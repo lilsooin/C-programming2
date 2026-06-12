@@ -9,6 +9,7 @@ using codesample.operator2;
 using codesample.outparameterModifier;
 using codesample.recursive;
 using codesample.stringbuilder;
+using codesample.stringconcat_vs_stringbuilder;
 using codesample.switch_statment;
 using System;
 using System.Collections.Generic;
@@ -73,7 +74,10 @@ namespace codesample
             // OutParameterModifier.OutParameterModifierRun();
 
             // StringBuilder
-            StringBuilderExample.StringBuilderRun();
+            // StringBuilderExample.StringBuilderRun();
+
+            // StringConcat vs StringBuilder
+            StringConcatVsStringBuilder.StringConcatVsStringBuilderRun();
         }
 
         static void BitShift()
