@@ -62,6 +62,8 @@
     <Compile Include="array of arrays\Tokenizer.cs" />
     <Compile Include="array\InsertStudentInformation3.cs" />
     <Compile Include="condition\InsertStudentInformation2.cs" />
+    <Compile Include="default arugment\DefaultParameters.cs" />
+    <Compile Include="function\FunctionOverLoading.cs" />
     <Compile Include="logical and conditional operator\LogicalExpressions.cs" />
     <Compile Include="logical and conditional operator\OrderOfExpressionEvaluation.cs" />
     <Compile Include="loop\Sum.cs" />
@@ -75,9 +77,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="function\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>

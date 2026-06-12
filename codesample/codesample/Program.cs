@@ -1,6 +1,8 @@
 ﻿using codesample.array;
 using codesample.array_of_arrays;
 using codesample.condition;
+using codesample.default_arugment;
+using codesample.function;
 using codesample.logical_and_conditional_operator;
 using codesample.loop;
 using codesample.operator2;
@@ -54,7 +56,17 @@ namespace codesample
             // ArrayOfArrays.ArrayOfArraysRun();
 
             // array of arrays(tokenizer)
-            Tokenizer.TokenizerRun();
+            // Tokenizer.TokenizerRun();
+
+            // function
+            //FunctionOverLoading.Foo();
+            //FunctionOverLoading.Foo(10);
+            //FunctionOverLoading.Foo("POCU");
+            //FunctionOverLoading.Foo("POCU", "COMP1500", "Intro to programming!");
+
+            // default parameters
+            DefasultParameters.DefaultParametersRun();
+
         }
 
         static void BitShift()
