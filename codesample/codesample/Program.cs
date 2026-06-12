@@ -8,6 +8,7 @@ using codesample.loop;
 using codesample.operator2;
 using codesample.outparameterModifier;
 using codesample.recursive;
+using codesample.stringbuilder;
 using codesample.switch_statment;
 using System;
 using System.Collections.Generic;
@@ -69,8 +70,10 @@ namespace codesample
             // DefasultParameters.DefaultParametersRun();
 
             // OutParameterModifier
-            OutParameterModifier.OutParameterModifierRun();
+            // OutParameterModifier.OutParameterModifierRun();
 
+            // StringBuilder
+            StringBuilderExample.StringBuilderRun();
         }
 
         static void BitShift()
