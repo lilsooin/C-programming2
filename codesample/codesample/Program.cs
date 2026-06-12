@@ -6,6 +6,7 @@ using codesample.function;
 using codesample.logical_and_conditional_operator;
 using codesample.loop;
 using codesample.operator2;
+using codesample.outparameterModifier;
 using codesample.recursive;
 using codesample.switch_statment;
 using System;
@@ -65,7 +66,10 @@ namespace codesample
             //FunctionOverLoading.Foo("POCU", "COMP1500", "Intro to programming!");
 
             // default parameters
-            DefasultParameters.DefaultParametersRun();
+            // DefasultParameters.DefaultParametersRun();
+
+            // OutParameterModifier
+            OutParameterModifier.OutParameterModifierRun();
 
         }
 
