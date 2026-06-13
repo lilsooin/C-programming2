@@ -2,6 +2,7 @@
 using codesample.array_of_arrays;
 using codesample.condition;
 using codesample.default_arugment;
+using codesample.FloatVsDoubleVsDecimal;
 using codesample.function;
 using codesample.logical_and_conditional_operator;
 using codesample.loop;
@@ -77,7 +78,10 @@ namespace codesample
             // StringBuilderExample.StringBuilderRun();
 
             // StringConcat vs StringBuilder
-            StringConcatVsStringBuilder.StringConcatVsStringBuilderRun();
+            // StringConcatVsStringBuilder.StringConcatVsStringBuilderRun();
+
+            // float vs double vs decimal
+            FloatVsDoubleVsDecimal.FloatVsDoubleVsDecimal.FloatVsDoubleVsDecimalRun();
         }
 
         static void BitShift()

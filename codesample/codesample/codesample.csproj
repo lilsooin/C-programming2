@@ -63,6 +63,7 @@
     <Compile Include="array\InsertStudentInformation3.cs" />
     <Compile Include="condition\InsertStudentInformation2.cs" />
     <Compile Include="default arugment\DefaultParameters.cs" />
+    <Compile Include="floatVsDoubleVsDecimal\FloatVsDoubleVsDecimal.cs" />
     <Compile Include="function\FunctionOverLoading.cs" />
     <Compile Include="logical and conditional operator\LogicalExpressions.cs" />
     <Compile Include="logical and conditional operator\OrderOfExpressionEvaluation.cs" />
