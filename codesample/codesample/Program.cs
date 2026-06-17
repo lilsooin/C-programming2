@@ -4,6 +4,7 @@ using codesample.condition;
 using codesample.default_arugment;
 using codesample.dictionary;
 using codesample.FloatVsDoubleVsDecimal;
+using codesample.foreachloop;
 using codesample.function;
 using codesample.logical_and_conditional_operator;
 using codesample.loop;
@@ -85,8 +86,10 @@ namespace codesample
             // FloatVsDoubleVsDecimal.FloatVsDoubleVsDecimal.FloatVsDoubleVsDecimalRun();
 
             // dictionary
-            DictionaryExample.DictionaryExampleRun();
+            // DictionaryExample.DictionaryExampleRun();
 
+            // foreach
+            ForEachLoop.ForEachLoopRun();
         }
 
         static void BitShift()

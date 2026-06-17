@@ -65,6 +65,7 @@
     <Compile Include="default arugment\DefaultParameters.cs" />
     <Compile Include="dictionary\DictionaryExample.cs" />
     <Compile Include="floatVsDoubleVsDecimal\FloatVsDoubleVsDecimal.cs" />
+    <Compile Include="foreachloop\ForEachLoop.cs" />
     <Compile Include="function\FunctionOverLoading.cs" />
     <Compile Include="logical and conditional operator\LogicalExpressions.cs" />
     <Compile Include="logical and conditional operator\OrderOfExpressionEvaluation.cs" />
