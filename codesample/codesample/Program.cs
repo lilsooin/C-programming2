@@ -1,5 +1,6 @@
 ﻿using codesample.array;
 using codesample.array_of_arrays;
+using codesample.class_example;
 using codesample.condition;
 using codesample.default_arugment;
 using codesample.dictionary;
@@ -89,7 +90,29 @@ namespace codesample
             // DictionaryExample.DictionaryExampleRun();
 
             // foreach
-            ForEachLoop.ForEachLoopRun();
+            // ForEachLoop.ForEachLoopRun();
+
+            // class
+            Warrior warrior = new Warrior("Chuck");
+
+            warrior.Introduce();
+            warrior.GetStatus();
+
+            // warrior.Name = "Peter";
+
+            warrior.SwordStrike();
+            warrior.UseWhirlwind();
+            warrior.UseWhirlwind();
+            warrior.UseWhirlwind();
+            warrior.GetStatus();
+            warrior.Rest();
+
+            warrior.GetStatus();
+
+            warrior.Health -= 200;
+            // warrior.mHealth = 5000;
+
+            warrior.GetStatus();
         }
 
         static void BitShift()
